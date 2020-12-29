@@ -1,0 +1,5 @@
+reset;
+model model_basic.mod;
+data test_basic.mod;
+option solver cplex;
+solve;
