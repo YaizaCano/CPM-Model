@@ -1,0 +1,21 @@
+reset;
+model model_cost.mod;
+data data_2.dat;
+option solver minos;
+var alpha_counter;
+let alpha_counter := 0.0;
+repeat while alpha_counter <= 1.0{
+  let alpha := alpha_counter;
+  solve;
+  display alpha;
+  display b0;
+  display r;
+  display total_cost;
+  display interest_pay;
+  display total_duration;
+  display durations;
+  display costs;
+  display inactivity;
+  display t;
+  let alpha_counter := alpha_counter + 0.01;
+}

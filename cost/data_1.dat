@@ -1,0 +1,76 @@
+set MILESTONES:= S M12 M13 I1 M23 M24 I2 T;
+
+set TASKS :=
+S M12
+S M13
+M12 I1
+M13 I1
+I1 M23
+I1 M24
+M23 I2
+M24 I2
+I2 T
+;
+
+set REAL_TASKS :=
+S M12
+S M13
+I1 M23
+I1 M24
+I2 T
+;
+
+param b0 = 200;
+param alpha = 0.7;
+param r = 15;
+
+param normal_costs :=
+S M12 58
+S M13 76
+M12 I1 0
+M13 I1 0
+I1 M23 25
+I1 M24 7
+M23 I2 0
+M24 I2 0
+I2 T 80
+;
+
+param crash_costs :=
+S M12 74
+S M13 101
+M12 I1 0
+M13 I1 0
+I1 M23 225
+I1 M24 108
+M23 I2 0
+M24 I2 0
+I2 T 124
+;
+
+param normal_duration :=
+S M12 20
+S M13 63
+M12 I1 0
+M13 I1 0
+I1 M23 91
+I1 M24 96
+M23 I2 0
+M24 I2 0
+I2 T 83
+
+;
+
+
+param crash_duration :=
+S M12 3
+S M13 21
+M12 I1 0
+M13 I1 0
+I1 M23 41
+I1 M24 44
+M23 I2 0
+M24 I2 0
+I2 T 72
+
+;
